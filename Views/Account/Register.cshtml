@@ -1,0 +1,28 @@
+﻿@model RegisterViewModel
+
+
+<h2>Register</h2>
+
+<div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+</div>
+
+<form method="post" class="d-flex flex-column gap-3 align-items-baseline">
+    <div>
+        <label for="Email">Email</label>
+        <input id="Email" type="email" name="Email"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Password">Password</label>
+        <input id="Password" type="password" name="Password"/>
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="ConfirmPassword">Confirm Password</label>
+        <input id="ConfirmPassword" type="password" name="ConfirmPassword"/>
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+
+    <button type="submit">Register</button>
+</form>
